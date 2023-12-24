@@ -1,0 +1,19 @@
+{
+  "name": "restaurants-review-backend",
+  "version": "2023",
+  "description": "A comprehensive platform for users to read and write reviews of various restaurants.",
+  "main": "restaurants-review-controller.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon restaurants-review-controller.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "rest": "^2.0.0",
+    "nodemon": "^3.0.1"
+  }
+}

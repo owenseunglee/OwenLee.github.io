@@ -1,0 +1,88 @@
+### CREATE five documents. 
+POST http://localhost:3000/reviews HTTP/1.1
+content-type: application/json
+
+{
+    "restaurant": "Owen's BBQ",
+    "review": "Great food and service",
+    "rate": 4.9,
+    "date": "2013-04-22"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/reviews HTTP/1.1
+content-type: application/json
+
+{
+    "restaurant": "Owen's Boba Time",
+    "review": "Best boba in the town",
+    "rate": 5.0,
+    "date": "2015-01-13"
+}
+
+### CREATE 3
+POST http://localhost:3000/reviews HTTP/1.1
+content-type: application/json
+
+{
+    "restaurant": "el taco de Mexico",
+    "review": "Make sure to get their burritos",
+    "rate": 3.4,
+    "date": "2023-10-05"
+}
+
+### CREATE 4
+POST http://localhost:3000/reviews HTTP/1.1
+content-type: application/json
+
+{
+    "restaurant": "I Like Sushi Sushi",
+    "review": "Very expensive and not worth it",
+    "rate": 1.0,
+    "date": "2017-06-29"
+}
+
+### CREATE 5
+POST http://localhost:3000/reviews HTTP/1.1
+content-type: application/json
+
+{
+    "restaurant": "In-N-Never-Out",
+    "review": "Be prepared to wait",
+    "rate": 4.0,
+    "date": "2003-01-11"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/reviews HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/reviews/64d3b1398146c0d744a4b95b HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/reviews/656aae1c563831da4193d829 HTTP/1.1
+content-type: application/json
+
+{
+    "restaurant": "Owen's Boba Time",
+    "review": "They added new items!",
+    "rate": 5,
+    "date": "2016-5-20"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/reviews/656aae1c563831da4193d829 HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/reviews HTTP/1.1
+
