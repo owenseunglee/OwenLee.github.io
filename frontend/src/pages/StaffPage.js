@@ -16,7 +16,7 @@ function StaffPage() {
                 return response.json();
             } else {
                 setFailureMessage('Failed to fetch data');
-                throw new Error('Failed to Fetch Data');
+                throw new Error('Failed to fetch Data');
             }
         })
         

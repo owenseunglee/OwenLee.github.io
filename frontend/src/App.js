@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import './App.css';
-
 import ReviewsPage from './pages/ReviewsPage';
 import AddReviewPageForm from './pages/AddReviewPageForm';
 import EditReviewPageForm from './pages/EditReviewPageForm';
 import HomePage from './pages/HomePage';
 import TopicsPage from './pages/TopicPage';
 import StaffPage from './pages/StaffPage';
+import ContactForm from './pages/ContactPage';
 
-// Define the function that renders the content in Routes, using State.
 function App() {
 
   const [review, setReviewToEdit] = useState([])
@@ -35,8 +34,7 @@ function App() {
                     <Route path="/topics" element={<TopicsPage />} />
                     <Route path="/reviewLog" element={<ReviewsPage setReview={setReviewToEdit}/>} />
                     <Route path="/staff" element={<StaffPage />} />
-
-                    {/* Or these if your schema requires SHORT data input: */}
+                    <Route path="/contact" element={<ContactForm />} />
                     <Route path="/create" element={<AddReviewPageForm />} />   
                     <Route path="/update" element={<EditReviewPageForm reviewToEdit={review} />} />
                 </Routes>

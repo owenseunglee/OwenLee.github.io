@@ -62,7 +62,7 @@ export const AddReviewPageForm = () => {
                     <input
                         type="date"
                         value={date}
-                        onChange={e => setDate(e.target.value.date.toLocaleDateString("en-US"))} 
+                        onChange={e => setDate(e.target.value)}
                         id="date" />
 
                     <label htmlFor="submit">

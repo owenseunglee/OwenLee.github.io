@@ -1,8 +1,6 @@
 import React from 'react';
 import Review from './Review';
 
-//import Movie from './Review';
-
 function ReviewList({ reviews, onDelete, onEdit }) {
     return (
         <table id="reviews">
